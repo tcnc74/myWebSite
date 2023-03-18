@@ -66,10 +66,6 @@ body {
     background-position: 0% -5%;
 }
 
-#menu[data-active-index="2"] > #menu-background-image {
-    background-position: 0% -10%;
-}
-
 /*This puts the background image back to index 0 position*/
 #menu-items:not(:hover) ~ #menu-background-image {
     background-position: 0% -0%;
@@ -113,8 +109,20 @@ body {
     background-position: 0% -50%;
 }
 
-#menu[data-active-index="2"] > #menu-background-pattern {
-    background-position: 0% -75%;
+/* ------about.html formatting----- */
+#about {
+    color: white;
+    font-size: clamp(1rem, 3vw, 3rem);
+    font-family: "Ibarra Real Nova", serif;
+
+    display: block;
+    text-decoration: none;
+    padding: clamp(0.25rem, 0.5vw, 1rem) 0rem;
+    transition: opacity 400ms ease;
+    z-index: 1;
+    opacity: 0.80;
+    margin-left: clamp(10rem, 5vw, 25rem);
+    position: relative;
 }
 
 #about-background-image {
@@ -136,17 +144,15 @@ body {
         background-position 800ms ease;
 }
 
-#about {
-    color: white;
-    font-size: clamp(1rem, 4vw, 4rem);
-    font-family: "Ibarra Real Nova", serif;
+#menu-items:hover ~ #about-background-image {
+    background-size: 105vmax;
+    opacity: 0.10;
+}
 
-    display: block;
-    text-decoration: none;
-    padding: clamp(0.25rem, 0.5vw, 1rem) 0rem;
-    transition: opacity 400ms ease;
-    z-index: 2;
-    opacity: 0.50;
-    margin-left: clamp(10rem, 5vw, 25rem);
-    position: relative;
+#menu[data-active-index="0"] > #about-background-image {
+    background-position: 0% -0%;
+}
+
+#menu[data-active-index="1"] > #about-background-image {
+    background-position: 0% -5%;
 }

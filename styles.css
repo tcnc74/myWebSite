@@ -130,6 +130,7 @@ body {
     width: 100%;
     
     background-image: url("images/me.jpeg");
+    background-attachment: fixed;
     position: absolute;
     left: 0px;
     top: 0px;
